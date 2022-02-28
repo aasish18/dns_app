@@ -18,11 +18,9 @@ hName and fsPort are the Fibonacci server's host name and port number, whereas a
 # How to build & deploy
   
 Under each of the 3 folders US, AS, and FS, please use command:
-  
 docker build -t path .
  
 please build a Docker network using:
-  
 docker network create someNetworkName
 
 Then, for each of the three images, docker run is used to run them in containers. To run these images on your Docker network, use the —network someNetworkName option in the run command. Furthermore, for user server, Fibonacci server, and authoritative server, use ports 8080:8080, 9090:9090, and 53533:53533, respectively.
