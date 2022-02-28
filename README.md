@@ -13,3 +13,14 @@ The user server is represented by the letter US. It's a basic HTTP web server th
 /fibonacci?hostname=<hName>&fs_port=<fsPort>&number=<some_value>&as_ip=<asIP>&as_port=<asPort>
   
 hName and fsPort are the Fibonacci server's host name and port number, whereas asIP and asPort are the authoritative server's IP address and port. If the DNS query of hName on the authoritative server successfully retrieves the Fibonacci server's IP address, some value will be given to the route /fibonacci on Fibonacci server.
+
+  
+# How to build & deploy
+  
+Under each of the 3 folders US, AS, and FS, please use command:
+  
+docker build -t path .
+ 
+please build a Docker network using:
+  
+docker network create someNetworkName
